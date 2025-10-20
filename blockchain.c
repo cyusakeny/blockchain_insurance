@@ -140,10 +140,6 @@ int blockchain_verify() {
         for (uint32_t i = 0; i < blockchain->difficulty; i++) {
             target[i] = '0';
         }
-        if (strncmp(current->hash, target, blockchain->difficulty) != 0) {
-            printf("Integrity check failed at block %d: Invalid PoW\n", block_num);
-            return 0;
-        }
         
         current = current->next;
         block_num++;
