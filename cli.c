@@ -75,7 +75,7 @@ void cli_preauth() {
     printf("Enter Diagnosis Code: ");
     scanf("%15s", payload.diagnosis_code);
     
-    payload.event_type = CLAIM_DECISION;
+    payload.event_type = PREAUTH_REQUEST;
     
     printf("Enter Decision Notes (APPROVED/DENIED/PARTIAL): ");
     getchar();
